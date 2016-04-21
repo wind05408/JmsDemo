@@ -10,7 +10,7 @@ import javax.jms.*;
  * @author dk
  * @date 2016/4/21
  *
- * activemq������ʵ��
+ * activemq消费者
  */
 public class ConsumerApp implements MessageListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerApp.class);
@@ -44,7 +44,6 @@ public class ConsumerApp implements MessageListener {
     public void onMessage(Message message) {
         TextMessage txtMessage = (TextMessage)message;
         try {
-            System.out.println("get message " + txtMessage.getText());
             LOGGER.info ("get message " + txtMessage.getText());
         } catch (JMSException e) {
             LOGGER.error("error {}", e);
