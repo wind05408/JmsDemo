@@ -10,7 +10,14 @@ import javax.jms.Topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-
+/**
+ * 消息生产者为发布者（publisher）,消息消费者为订阅者（subscriber）。
+	 发布一个主题消息，能够由多个订阅者所接收。
+	 广播（broadcasting）消息。
+	 传送模型是基于推送(push)的模型
+ *
+ * 发布者
+ */
 public class TopicPublisher {
 	public static void main(String[] args) throws JMSException {
 		         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory("tcp://localhost:61616");

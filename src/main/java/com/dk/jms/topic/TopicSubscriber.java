@@ -11,7 +11,9 @@ import javax.jms.Topic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
-
+/**
+ * ¶©ÔÄÕß
+ */
 public class TopicSubscriber {
 
 	/**
