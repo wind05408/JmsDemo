@@ -32,7 +32,7 @@ public class ProducerApp {
         //创建队列
         Destination dest = session.createQueue(SUBJECT);
         //createTopic方法用来创建Topic
-        session.createTopic("TOPIC");
+        //session.createTopic("TOPIC");
 
         //通过session可以创建消息的生产者
         MessageProducer producer = session.createProducer(dest);
