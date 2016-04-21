@@ -31,6 +31,8 @@ public class ConsumerApp implements MessageListener {
 
         //通过会话创建目标
         Destination dest = session.createQueue(SUBJECT);
+        //Topic topic = session.createTopic("TOPIC");
+
         //创建mq消息的消费者
         MessageConsumer consumer = session.createConsumer(dest);
 
