@@ -1,0 +1,24 @@
+jcip:Java Concurrency In Practice
+
+pom.xml:
+    <dependency>
+        <groupId>net.jcip</groupId>
+        <artifactId>jcip-annotations</artifactId>
+        <version>1.0</version>
+    </dependency>
+
+类Annotation:
+    @ThreadSafe：类是线程安全的；
+    @Immutable：类是不可变的（属性为final），不可变对象是线程安全的；
+    @NotThreadSafe：类不是线程安全的，如果类未加任何注解，则不能确定是否线程安全，认为是非线程安全的
+
+域Annotation和方法Annotation
+    @GuardedBy(lock)：线程只有在持有了一个特定的锁（lock）后，才能访问某个域或方法；
+    @GuardedBy("this")：包换在对象中的内部锁（方法或域是这个对象的一个成员）；
+    @GuardedBy("fieldName")：值与filedName引用的对象相关联的锁，或者是一个隐式锁（filedName没有引用一个Lock），或者是一个显示锁（filedName引用了一个Lock）；
+    @GuardedBy("ClassName.fieldName")：类似于@GuardedBy("fieldName")，不过所引用的锁对象是存储在另一个类（或本类）中的静态域；
+    @GuardedBy("methodName()")：锁对象是methodName()方法的返回值；
+    @GuardedBy("ClassName.class")：ClassName类的直接量对象。
+
+
+
