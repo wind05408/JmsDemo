@@ -3,7 +3,7 @@ package com.dk.thread.safe;
 /**
  * @author dk
  * @date 2016/4/25
- * ·¢²¼ºÍÒİ³öµÄ²âÊÔ
+ * å‘å¸ƒå’Œé€¸å‡ºçš„æµ‹è¯•
  */
 public class UnsafeStatesTest {
     public static void main(String[] args) {
